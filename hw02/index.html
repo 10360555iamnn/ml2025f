@@ -1,21 +1,21 @@
-<!doctype html>
-<html lang="zh-Hant-TW">
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://golden-demise.github.io/ml2025f/hw02/index.html -->
+<html lang="zh-Hant-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Required meta tags -->
-<meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- D3, jquery -->
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+<script src="./index_files/d3.v3.min.js.下載" charset="utf-8"></script>
+<script src="./index_files/jquery-3.6.0.min.js.下載" charset="utf-8"></script>
 
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+<script src="./index_files/bootstrap.bundle.min.js.下載"></script>
 
 <title>作業二</title>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
-<link rel="icon" href="../hw00/favicon.svg"/>
+<link rel="icon" href="https://golden-demise.github.io/ml2025f/hw00/favicon.svg">
 <style type="text/css">
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 
@@ -128,19 +128,19 @@
   }
 </style>
 </head>
-<body>
+<body data-new-gr-c-s-check-loaded="14.1258.0" data-gr-ext-installed="">
 
 <div class="container-fluid">
 
   <!-- ---------------------------------------------- -->
   <div class="row hw12 toprow">
-    <div class="col twenty"><a href="../hw00/index.html">00</a></div>
-    <div class="col twenty"><a href="../hw01/index.html">01</a></div>
-    <div class="col twenty"><a href="../hw02/index.html">02</a></div>
-    <div class="col twenty"><a href="../hw03/index.html">03</a></div>
-    <div class="col twenty"><a href="../hw04/index.html">04</a></div>
-    <div class="col twenty"><a href="../hw05/index.html">05</a></div>
-    <div class="col twenty"><a href="../hw06/index.html">06</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw00/index.html">00</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw01/index.html">01</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw02/index.html">02</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw03/index.html">03</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw04/index.html">04</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw05/index.html">05</a></div>
+    <div class="col twenty"><a href="https://golden-demise.github.io/ml2025f/hw06/index.html">06</a></div>
   </div>
 
   <!-- ------------------------------------------------>
@@ -153,7 +153,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次的心臟肌肉訓練作業讓我收穫良多，從電腦斷層影像一步步建立起模型，最終能訓練出一顆完整的心臟。雖然準確率還未達到理想的高度，但能看到模型成功運作，依然讓人充滿成就感。整個過程花費不少時間在微調模型與超參數上，但學習到的內容非常豐富。特別是這次接觸並實際運用了 Google Colab 與 3D U-Net 這兩項工具，讓我更深入理解醫學影像分割的流程與技術，整體而言既具挑戰性又非常有趣。
     </div>
   </div>
 
@@ -161,51 +161,128 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <table>
-        <tr>
+        <tbody><tr>
           <th>總分</th>
           <th>完成後打勾</th>
           <th>配分</th>
           <th>分項描述</th>
         </tr>
         <tr>
-          <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td rowspan="4" id="myTotal">10</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked=""></td>
+          <td id="m1">4</td>
+          <td>Simple baseline - 完成colab baseline的訓練並產生權重檔
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
-          <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked=""></td>
+          <td id="m2">4</td>
+          <td>Medium baseline - 調整並增加使用的訓練資料集(AICUP_training.json)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
-        </tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked=""></td>
+          <td id="m3">2</td>
+          <td>Strong baseline - 使用其他模型(例如. Attn U-Net、UNETR、Swin UNETR...等)，對心臟資料進行訓練，並繳交colab程式碼。
+        </td></tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>-10</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td id="m4">-10</td>
           <td>沒有寫100字心得</td>
         </tr>
 
-      </table>
+      </tbody></table>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <!-- <iframe width="100%" height="560" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+      <table>
+        <tbody><tr>
+          <td> Simple Baseline Dice分數圖片，訓練/驗證/測試(9/3/3)
+          <img src="./index_files/simple.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Medium Baseline Dice分數圖片，訓練/驗證/測試(40/5/5)
+          <img src="./index_files/medium.png" width="100%" height="560">
+        </td></tr>
+      </tbody></table>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
 
-  <!-- ------------------------------------------------>
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+      
+      <table>
+        <tbody><tr>
+          <td> Strong Baseline colab連結:
+            <a href="https://colab.research.google.com/drive/1bgTG8toNYNattytzLk_vyDGHVxmcGijb?usp=sharing">
+             https://colab.research.google.com/drive/1bgTG8toNYNattytzLk_vyDGHVxmcGijb?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了attention_unet
+          <img src="./index_files/strong_attention_unet.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Strong Baseline colab連結: 
+            <a href="https://colab.research.google.com/drive/1acxw3NPuziNOC4sb-ru_WKqLAR3gEPsj?usp=sharing">
+              https://colab.research.google.com/drive/1acxw3NPuziNOC4sb-ru_WKqLAR3gEPsj?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了SwinUNETR
+          <img src="./index_files/strong_SwinUNETR.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Strong Baseline colab連結: 
+            <a href="https://colab.research.google.com/drive/1bgTG8toNYNattytzLk_vyDGHVxmcGijb?usp=sharing">
+              https://colab.research.google.com/drive/1bgTG8toNYNattytzLk_vyDGHVxmcGijb?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了cotr
+          <img src="./index_files/strong_cotr.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Strong Baseline colab連結: 
+            <a href="https://colab.research.google.com/drive/1nAulvpm4ZAvcdNqBe1fZqnusyNzyPoCf?usp=sharing">
+              https://colab.research.google.com/drive/1nAulvpm4ZAvcdNqBe1fZqnusyNzyPoCf?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了DynUNet
+          <img src="./index_files/strong_DynUNet.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Strong Baseline colab連結: 
+            <a href="https://colab.research.google.com/drive/1-_mIA1T5UFi06S4NbaUBOL6Ho6Pp1hC2?usp=sharing">
+              https://colab.research.google.com/drive/1-_mIA1T5UFi06S4NbaUBOL6Ho6Pp1hC2?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了unetr
+          <img src="./index_files/strong_DynUNet.png" width="100%" height="560">
+        </td></tr>
+        <tr>
+          <td> Strong Baseline colab連結: 
+            <a href="https://colab.research.google.com/drive/1C9aYpA6SSbm8OVA4jfIq_eeAxuvZY75D?usp=sharing">
+              https://colab.research.google.com/drive/1C9aYpA6SSbm8OVA4jfIq_eeAxuvZY75D?usp=sharing
+            </a>
+          </td></tr>
+          <tr>
+          <td> Strong Baseline Dice分數圖片 使用了unetcnx_a1
+          <img src="./index_files/strong_unetcnx_a1.png" width="100%" height="560">
+        </td></tr>
+      </tbody></table>
+    </div>
+  </div>
 
+  <!-- ------------------------------------------------>
 
 <script>
   $(function() {
@@ -250,5 +327,26 @@
   }
 </script>
 
-</body>
-</html>
+
+
+</div><deepl-input-controller translate="no"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
