@@ -153,7 +153,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      透過作業五，我對訓練 YOLO 模型的流程有了更完整的理解。從選擇合適的模型版本，到實際調整參數，我逐漸掌握不同大小的 YOLO 架構在效能與速度上的差異。同時，我也更清楚資料集標註格式對訓練結果的重要性，只要標註不一致或格式錯誤，都可能直接影響模型的學習品質。透過反覆調整學習率、batch size 和訓練 epoch，我能看到模型表現隨著設定逐步改善，這讓我更能感受到調參在訓練中的關鍵性。整體來說，這次作業讓我不只學到操作步驟，更累積了實際調整與問題排查的經驗，對物件偵測任務有了更扎實的認識。
     </div>
   </div>
 
@@ -169,22 +169,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成 baseline Colab 訓練得到訓練分數及訓練權重</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 調整訓練筆數、Epochs 或其他參數得到比 Simple baseline 更高的分數</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 使用不同版本、大小模型進行訓練並繳交 Colab</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -196,9 +196,49 @@
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <!-- <iframe width="100%" height="560" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+      <table>
+        <tr>
+          <td> Simple Baseline mAP50 分數圖片
+          <img src="Simple.png" width="100%" height="auto">
+        </tr>
+        <tr>
+          <td> Medium Baseline mAP50 分數圖片，使用Baseline模型接續訓練20個 Epochs 得到更高分(第18回)
+          <img src="Medium.png" width="100%" height="auto">
+        </tr>
+        <tr>
+          <td> Strong Baseline <br>
+          Colab連結: 
+          <a href="https://colab.research.google.com/drive/1EhzyqHs-NPCjDxP5ZzKrMszCLlo9IKqx?usp=sharing">
+          https://colab.research.google.com/drive/1EhzyqHs-NPCjDxP5ZzKrMszCLlo9IKqx?usp=sharing
+          </a> <br>
+          使用yolo12s
+          <img src="yolov12s.png" width="100%" height="auto">
+          使用yolo12m
+          <img src="yolov12m.png" width="100%" height="auto">
+          使用yolo11m
+          <img src="yolo11m.png" width="100%" height="auto">
+          使用yolo11s
+          <img src="yolo11s.png" width="100%" height="auto">
+          使用yolo10n
+          <img src="yolov10n.png" width="100%" height="auto">
+          使用yolo10s
+          <img src="yolov10s.png" width="100%" height="auto">
+          使用yolo10m
+          <img src="yolov10m.png" width="100%" height="auto">
+          使用yolo9t
+          <img src="yolov9t.png" width="100%" height="auto">
+          使用yolo9s
+          <img src="yolov9s.png" width="100%" height="auto">
+          使用yolo9m
+          <img src="yolov9m.png" width="100%" height="auto">
+          使用yolo8s
+          <img src="yolov8s.png" width="100%" height="auto">
+          使用yolo8n
+          <img src="yolov8n.png" width="100%" height="auto">
+        </tr>
+      </table>
     </div>
   </div>
 
@@ -252,3 +292,8 @@
 
 </body>
 </html>
+
+
+
+
+
